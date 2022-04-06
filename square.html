@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgba(255, 192, 203, 0.205);
+        }
+        
+        html {
+            perspective: 800px;
+            /* Z轴网页申明样式 */
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            /* background-color: pink; */
+            margin: 200px auto;
+            transform-style: preserve-3d;
+            /* 容器显示3D效果 */
+            /*   transform: rotateX(45deg) rotateZ(45deg); */
+            animation: yangyi 10s infinite alternate;
+            /*  transform: rotateX(50deg) rotateY(50deg); */
+        }
+        
+        .box>div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /* 绝对定位 让图片叠加 */
+            opacity: 0.9;
+            /* 透明 */
+        }
+        
+        img {
+            width: 100px;
+            height: 100px;
+            vertical-align: top;
+            /*消除图片之间缝隙 */
+            /* 圆角 */
+        }
+        
+        .box1 {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        
+        .box2 {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        
+        .box3 {
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        
+        .box4 {
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+        
+        .box5 {
+            transform: rotateY(0deg) translateZ(50px);
+        }
+        
+        .box6 {
+            transform: rotateY(180deg) translateZ(50px);
+        }
+        
+        @keyframes yangyi {
+            form {
+                transform: rotateX(0) translateZ(0);
+            }
+            to {
+                transform: rotateY(1turn) rotateZ(-1turn);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <img src="./img/1.png">
+        </div>
+        <div class="box2">
+            <img src="./img/2.png">
+        </div>
+        <div class="box3">
+            <img src="./img/3.png">
+        </div>
+        <div class="box4">
+            <img src="./img/4.png">
+        </div>
+        <div class="box5">
+            <img src="./img/5.png">
+        </div>
+        <div class="box6">
+            <img src="./img/6.png">
+        </div>
+    </div>
+</body>
+
+</html>
